@@ -4,10 +4,10 @@ import random
 
 def main():
     show_header()
+    service.download_info()
+    print("there are {} episode.".format(service.get_latest_show_id()))
+    display_results()
 
-    max_episodes = service.download_info()
-
-    display_results(max_episodes)
 
 def display_results():
     start = random.randint(1, service.get_latest_show_id())
