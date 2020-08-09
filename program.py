@@ -9,10 +9,9 @@ def main():
 
     display_results(max_episodes)
 
-
-def display_results(mep):
-    start = random.randint(1, 10)
-    end = random.randint(20, mep + 1)
+def display_results():
+    start = random.randint(1, service.get_latest_show_id())
+    end = service.get_latest_show_id() + 1
 
     for show_id in range(start, end):
         info = service.get_episode(show_id)
