@@ -12,7 +12,7 @@ def main():
 
 
 def show_header():
-    print("Welcome to the talk python info downloader.")
+    print("Welcome to the talk python info downloader!")
     print()
 
 
