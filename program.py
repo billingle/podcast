@@ -1,4 +1,5 @@
 import service
+import random
 
 
 def main():
@@ -6,7 +7,14 @@ def main():
 
     max_episodes = service.download_info()
 
-    for show_id in range(1, max_episodes + 1):
+    display_results(max_episodes)
+
+
+def display_results(mep):
+    start = random.randint(1, 10)
+    end = random.randint(20, mep + 1)
+
+    for show_id in range(start, end):
         info = service.get_episode(show_id)
         print("{}. {}".format(info.show_id, info.title))
 
